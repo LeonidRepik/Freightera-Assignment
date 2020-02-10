@@ -1,0 +1,86 @@
+.input{
+    font-size: 1.4rem;
+    height:7rem;
+    background-color:#FFF;
+    border-bottom: var(--line); 
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+        &__sugestions{
+            color:grey;
+            font-size: 1.4rem;
+            height:3rem;
+
+            &-box{
+                background-color:transparent;
+                align-items: center;
+                width:97%;
+                margin-left: 2rem;
+            }
+        }
+
+    ///////////////////////////////////////////////////////////////////
+    /////////   SEARCH
+    &__search{
+        flex: 0 0 40%;
+
+        display:flex;
+        align-items:center;
+        justify-content: center;
+
+        &__input{
+            font-family: inherit;
+            font-size: 2rem;;
+            color:inherit;
+            background-color:var(--color-grey-light-2);
+            border:none;
+            padding:.7rem 2rem;
+            border-radius: 100px;
+            width:90%;
+            transition: all .3;
+            margin-right:-3.25rem; // TO make loop icon overlap a bit
+            margin-top:2rem;
+
+            &:focus{
+                outline:none;
+                width:100%;
+                background-color:var(--color-grey-light-3);
+
+            }
+
+            &:focus + &__button{
+                background-color:var(--color-grey-light-3);
+            }
+
+            &::-webkit-input-placeholder{
+                font-weight: 100;
+                color:var(--color-grey-light-4);
+            }
+        }
+    }
+}
+
+// OUTPUT
+.pac-item {
+    cursor: default;
+    padding: 0 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 30px;
+    text-align: left;
+    border-top: 1px solid #e6e6e6;
+    font-size: 11px;
+    color: #999
+}
+.pac-icon {
+    width: 15px;
+    height: 20px;
+    margin-right: 7px;
+    margin-top: 6px;
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);
+    background-size: 34px
+}
